@@ -1,0 +1,22 @@
+version: '3'
+services:
+
+  # Nodejs
+  tasklist:
+    container_name: tasklist
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      tasklist_network:
+    restart: always
+    volumes:
+      - .:/apps/efishery
+      - /apps/efishery/node_modules
+    ports:
+      - "${APP_PORT}:${APP_PORT}"
+
+#Docker Networks
+networks:
+  tasklist_network:
+    driver: bridge

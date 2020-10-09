@@ -1,0 +1,36 @@
+{
+  "name": "tasklist-pouchdb",
+  "version": "1.0.0",
+  "description": "tasklist using pouchdb",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon --max-old-space-size=2048 app.js",
+    "test": "nyc --reporter=html mocha --timeout 10000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/firmanJS/tasklist-efishery.git"
+  },
+  "author": "github.com/firmanjs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/firmanJS/tasklist-efishery/issues"
+  },
+  "homepage": "https://github.com/firmanJS/tasklist-efishery#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "cli-table": "^0.3.1",
+    "commander": "^6.1.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mocha": "^8.0.1",
+    "moment": "^2.27.0",
+    "nodemon": "^2.0.4",
+    "nyc": "^15.1.0",
+    "pouchdb": "^7.2.2"
+  },
+  "bin": {
+    "efishery-task": "./bin/index.js"
+  }
+}
