@@ -4,6 +4,7 @@ const app = express()
 const router = require('./routes')
 require('dotenv').config()
 
+app.use(express.json())
 app.use(express.static(__dirname + '/public'));
 app.use(router)
 

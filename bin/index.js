@@ -9,19 +9,24 @@ program
 program
     .command('Show existing task list')
     .alias('show')
-    .description('Get newest data from server.')
+    .description('Show existing task list.')
     .action( async () => {
         const lists = await listTask()
-        console.log(lists.rows);
+        console.log(lists);
     });
 
 program
     .command('Completing/Done a task')
     .alias('complete')
-    .description('Get newest data from server.')
+    .description('Completing/Done a task.')
     .action( async () => {
         const lists = await listTask()
-        const filterByCompleteTask = lists.rows.filter((res) => res.doc.is_completed === true)
+        let filterByCompleteTask
+        if(lists.length > 0){
+            filterByCompleteTask = lists.filter((res) => res.doc.is_completed === true)
+        }else{
+            filterByCompleteTask = lists
+        }
         console.log(filterByCompleteTask)
     });
 
