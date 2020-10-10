@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "1a7b9123-1aa5-4dbb-ba33-b4b5e093e5c3",
+		"name": "efishery-tasklist",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "save tasklist",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"task_name\": \"example 1\",\n    \"task_content\": \"test tes\",\n    \"task_tag\": [\n        \"abc\",\n        \"efd\"\n    ],\n    \"is_completed\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2020/api/v1/tasklist",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2020",
+					"path": [
+						"api",
+						"v1",
+						"tasklist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get tasklist",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2020/api/v1/tasklist",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2020",
+					"path": [
+						"api",
+						"v1",
+						"tasklist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete tasklist",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"task_name\": \"example 1\",\n    \"task_content\": \"test tes\",\n    \"task_tag\": [\n        \"abc\",\n        \"efd\"\n    ],\n    \"is_completed\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2020/api/v1/tasklist/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2020",
+					"path": [
+						"api",
+						"v1",
+						"tasklist",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "8a171d3a-438a-4a79-ac5d-3ea3327d3f62"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update tasklist",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"task_name\": \"example names\",\n    \"task_content\": \"example contents\",\n    \"task_tag\": [\n        \"abc\",\n        \"efd\"\n    ],\n    \"is_completed\": false,\n    \"createdAt\": \"2020-10-10 13:37:01\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2020/api/v1/tasklist/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2020",
+					"path": [
+						"api",
+						"v1",
+						"tasklist",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "8a171d3a-438a-4a79-ac5d-3ea3327d3f62"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
