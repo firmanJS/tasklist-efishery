@@ -50,8 +50,6 @@ docker-compose up --build -d
 ```
 #### execution npm with container docker
 ```sh
-# install package
-docker-compose exec tasklist npm install
 
 # link command
 docker-compose exec tasklist npm link
