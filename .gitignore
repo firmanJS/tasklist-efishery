@@ -1,3 +1,5 @@
 .env
 /node_modules/
 /efishery_task/
+/.nyc_output/
+/coverage/
