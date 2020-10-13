@@ -25,13 +25,13 @@ menjalankan via npm
 npm install
 
 # link command
-npm run link 
+npm link .
 
 #  menjalankan app
 npm run start
 
 # menampilkan command line yang tersedia
-npm run efishery-task
+npm run efishery-task help
 
 # menjalankan unit tetsing
 npm run test 
@@ -54,11 +54,12 @@ docker-compose up --build -d
 # link command
 docker-compose exec tasklist npm link
 
+# menampilkan command line yang tersedia
+docker-compose exec tasklist efishery-task
+
 # menjalankan unit testing
 docker-compose exec tasklist npm run test
 
-# menampilkan command line yang tersedia
-docker-compose exec tasklist efishery-task
 ```
 
 ## Dokumentasi API 
